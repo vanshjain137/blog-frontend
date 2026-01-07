@@ -1,0 +1,162 @@
+/* auth.css */
+
+.auth-page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+.auth-container {
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-header h2 {
+    font-size: 2.2rem;
+    color: #2d3436;
+    margin-bottom: 8px;
+    font-weight: 800;
+}
+
+.auth-header p {
+    color: #636e72;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #2d3436;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Password positioning */
+.password-field-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.auth-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #edf2f7;
+    border-radius: 12px;
+    font-size: 1rem;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Make space for the MUI icon */
+.password-field-wrapper .auth-input {
+    padding-right: 45px;
+}
+
+.auth-input:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+}
+
+.eye-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #718096;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    z-index: 10;
+}
+
+.eye-btn:hover {
+    color: #2d3436;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 16px;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.auth-btn:hover {
+    background: #444;
+    transform: translateY(-2px);
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: #636e72;
+}
+
+.auth-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+/* --- Responsive Styles for Mobile (< 750px) --- */
+@media (max-width: 750px) {
+    .auth-page-wrapper {
+        padding: 15px;
+        background: #f5f7fa; /* Simpler background for mobile performance */
+    }
+
+    .auth-container {
+        padding: 35px 25px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .auth-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .auth-input {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .auth-btn {
+        padding: 14px;
+        font-size: 1rem;
+    }
+}

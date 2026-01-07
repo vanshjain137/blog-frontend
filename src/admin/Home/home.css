@@ -1,0 +1,110 @@
+.dashboard-home-container {
+    padding: 30px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Banner Design */
+.welcome-banner {
+    background: linear-gradient(135deg, #2b67ff 0%, #1e53b0 100%);
+    padding: 50px 40px;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(43, 103, 255, 0.3);
+}
+
+.banner-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Grid and Cards */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.stat-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.stat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #eee;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-color: #2b67ff;
+}
+
+/* Icons */
+.stat-icon-wrapper {
+    font-size: 35px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: background 0.3s;
+}
+
+.blog-icon { background: #e7f0ff; }
+.category-icon { background: #fef4e5; }
+.add-icon { background: #e6f7ef; }
+
+/* Text inside cards */
+.stat-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #2d3436;
+}
+
+.stat-info p {
+    margin: 5px 0 15px;
+    color: #636e72;
+    font-size: 0.95rem;
+}
+
+.card-action {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #2b67ff;
+    text-transform: uppercase;
+}
+
+/* Notice Box */
+.admin-notice {
+    margin-top: 50px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 6px solid #2b67ff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.admin-notice h3 { margin-top: 0; }
+.admin-notice ul { padding-left: 20px; line-height: 1.8; color: #444; }
+
+
+
+@media screen and (max-width: 750px) {
+    .dashboard-home-container { padding: 15px; }
+    .welcome-banner { padding: 30px 20px; }
+    .banner-text h1 { font-size: 1.8rem; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .stat-card { padding: 20px; }
+}

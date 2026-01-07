@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# 📝 Modern MERN Blog Application (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A feature-rich, responsive Blog Application built with **React.js**. This project features a clean user interface for readers and a robust administrative dashboard for content management.
 
-## Available Scripts
+## 🚀 Key Features
 
-In the project directory, you can run:
+### User Side
+* **Dynamic Content:** Browse blogs by latest posts or specific categories.
+* **Secure Authentication:** User signup/login system with **OTP verification** and **Password Reset** functionality.
+* **Interactive Comments:** Registered users can post comments and manage their own activity.
+* **Rich Text Rendering:** Beautifully rendered blog posts with support for images and formatting.
 
-### `npm start`
+### Admin Side
+* **Content Management:** Full CRUD (Create, Read, Update, Delete) for Blogs and Categories.
+* **Security:** Protected dashboard routes with token-based authentication (JWT).
+* **Image Handling:** Integrated with **Cloudinary** for high-performance image uploads and storage.
+* **Rich Text Editor:** Integrated **ReactQuill** for professional content creation.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛡️ Security & Best Practices
+* **XSS Protection:** Implemented `DOMPurify` to sanitize HTML content before rendering, preventing Cross-Site Scripting attacks.
+* **Environment Variables:** Sensitive data (API Keys, Cloudinary config) is managed through `.env` files for security.
+* **Clean Code:** Zero ESLint warnings and fully accessible JSX (A11y compliant).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
+* **Frontend:** React.js, React Router v6
+* **Styling:** Custom CSS3
+* **State & Data:** Axios, React Hooks (useState, useEffect, useCallback)
+* **Images:** Cloudinary API
+* **Security:** DOMPurify
 
-### `npm test`
+## ⚙️ Installation & Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repository:**
 
-### `npm run build`
+   ```bash
+   git clone <your-repository-link>
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Configure Environment Variables:** Create a file named `.env` in the root directory and add your credentials:
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```env
+   REACT_APP_CLOUD_NAME=dahb0xfsm
+   REACT_APP_UPLOAD_PRESET=react_blog_upload
+   REACT_APP_API_URL=http://localhost:3000
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Start the development server:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📦 Production Build
 
-## Learn More
+To create an optimized production build:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm run build
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Developed by **Vansh Jain**

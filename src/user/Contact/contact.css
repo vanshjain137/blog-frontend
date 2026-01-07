@@ -1,0 +1,140 @@
+.contact-container {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.contact-subtext {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Left Side: Form */
+.contact-form-section {
+  padding: 40px;
+}
+
+.contact-form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form-section input, 
+.contact-form-section textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #e1e1e1;
+  border-radius: 12px;
+  background: #f9f9f9;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form-section input:focus, 
+.contact-form-section textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+}
+
+.contact-form-section button {
+  padding: 15px;
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.contact-form-section button:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+.contact-form-section button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.contact-info {
+  background: #1a1a1a;
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.social-links {
+  margin-top: 30px;
+}
+
+.social-links a {
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.social-links a:hover {
+  color: #00c6ff;
+}
+
+
+@media (max-width: 750px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .contact-subtext {
+    text-align: center;
+  }
+
+  .contact-info {
+    order: 2;
+    padding: 30px;
+  }
+
+  .contact-form-section {
+    padding: 30px;
+  }
+}

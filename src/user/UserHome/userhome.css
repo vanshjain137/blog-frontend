@@ -1,0 +1,184 @@
+.banner
+{
+    height: 30vw;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to right, rgb(63, 245, 255), rgb(43, 103, 255));
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.developer-img
+{
+    height: 20vw;
+    margin-left: 10%;
+}
+
+.welcome
+{
+    font-size: 1vw;
+}
+
+.blog-heading
+{
+    font-size: 2vw;
+}
+
+.heading
+{
+    font-size: 1.5vw;
+    color: rgb(233, 11, 11);
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.category-container
+{
+    height: 18vw;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.category-image
+{
+    height: 10vw;
+    width: 10vw;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.category-title
+{
+    font-size: 1vw;
+}
+
+.blog-container
+{
+    width: 100%;
+    /* height: 23vw; */
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+.blog
+{
+    width: 20%;
+    margin-left: 2px;
+    height: 23vw;
+    box-shadow: 5px 5px 15px;
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.category-image:hover, .blog:hover {
+    transform: scale(1.05);
+}
+
+.blog-image
+{
+    width: 100%;
+    height: 15vw;
+}
+
+.blog-title
+{
+    font-size: 1vw;
+    margin-top: 1vw;
+    color: rgb(36,35,35);
+}
+
+.blog-category
+{
+    color: rgb(71,72,72);
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:750px) {
+    .banner 
+    {
+        height: 40vw;
+    }
+
+    .developer-img 
+    {
+        height: 30vw;
+    }
+
+    .welcome 
+    {
+        font-size: 3vw;
+    }
+
+    .blog-heading 
+    {
+        font-size: 5vw;
+    }
+
+    .heading
+    {
+        font-size: 4vw;
+        margin-top: 2vw;
+        margin-bottom: 3vw;
+    }
+
+    .category-container {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 20px 0;
+    }
+
+    .category-image
+    {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .category-title
+    {
+        font-size: 3vw;
+    }
+
+    .blog-container
+    {
+        flex-direction: column;
+    }
+
+    .blog
+    {
+        width: 100%;
+        margin-top: 5vw;
+        height: 70vw;
+        padding: 10px;
+    }
+
+    .blog-image
+    {
+        height: 45vw;
+        width: 100%;
+    }
+
+    .blog-title
+    {
+        font-size: 3.5vw;
+    }
+}
