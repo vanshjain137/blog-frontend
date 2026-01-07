@@ -46,9 +46,9 @@ A feature-rich, responsive Blog Application built with **React.js**. This projec
 
 
    ```env
-   REACT_APP_CLOUD_NAME=dahb0xfsm
-   REACT_APP_UPLOAD_PRESET=react_blog_upload
-   REACT_APP_API_URL=http://localhost:3000
+   REACT_APP_CLOUD_NAME="your cloud name"
+   REACT_APP_UPLOAD_PRESET="your upload preset"
+   REACT_APP_API_URL="hosting url"
    ```
 
 4. **Start the development server:**
