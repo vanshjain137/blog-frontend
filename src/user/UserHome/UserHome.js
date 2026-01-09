@@ -21,7 +21,7 @@ const UserHome = () => {
   }, []);
 
   const getCategory = () => {
-    axios.get(`${process.env.REACT_APP_API_URL}/category/latest-category/4`)
+    return axios.get(`${process.env.REACT_APP_API_URL}/category/latest-category/4`)
       .then(res => {
         console.log(res)
         setCategory(res.data.Category)
@@ -32,7 +32,7 @@ const UserHome = () => {
   }
 
   const getBlog = () => {
-    axios.get(`${process.env.REACT_APP_API_URL}/blog/latest-post/4`)
+    return axios.get(`${process.env.REACT_APP_API_URL}/blog/latest-post/4`)
       .then(res => {
         console.log(res)
         setBlogs(res.data.Blog)

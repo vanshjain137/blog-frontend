@@ -216,4 +216,23 @@
     {
         font-size: 3.5vw;
     }
+
+    .loader-container {
+        padding: 40px 10px;
+    }
+
+    .loader-text {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .loader-subtext {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .spinner {
+        width: 40px;
+        height: 40px;
+    }
 }
