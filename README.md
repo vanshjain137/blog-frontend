@@ -2,6 +2,11 @@
 
 A feature-rich, responsive Blog Application built with **React.js**. This project features a clean user interface for readers and a robust administrative dashboard for content management.
 
+## 🔗 Project Links
+* **Live Demo:** [https://vansh-blog-app.vercel.app/](https://vansh-blog-app.vercel.app/)
+* **Backend Repository:** [View Backend Repository](https://github.com/vanshjain137/blog-backend)
+* **Full Stack Architecture:** This repository contains the Frontend code. The Node.js/Express backend is managed in a separate repository to maintain clean architectural boundaries.
+
 ## 🚀 Key Features
 
 ### User Side
