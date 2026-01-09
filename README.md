@@ -1,5 +1,7 @@
 # 📝 Modern MERN Blog Application (Frontend)
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vansh-jain-b955a23a1/)
+
 A feature-rich, responsive Blog Application built with **React.js**. This project features a clean user interface for readers and a robust administrative dashboard for content management.
 
 ## 🔗 Project Links
