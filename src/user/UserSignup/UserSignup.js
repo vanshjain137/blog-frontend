@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import ReCAPTCHA from "react-google-recaptcha";
 import '../UserLogin/auth.css';
 
 const UserSignup = () => {
@@ -12,14 +13,24 @@ const UserSignup = () => {
   const [password, setPassword] = useState('');
   const [otp, setOtp] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [recaptchaValue, setRecaptchaValue] = useState(null);
   const navigate = useNavigate();
 
   const sendOtp = (e) => {
     e.preventDefault();
-    axios.post(`${process.env.REACT_APP_API_URL}/auth/user/signup-otp`, { email })
+
+    if (!recaptchaValue) {
+      alert("Please complete the reCAPTCHA");
+      return;
+    }
+
+    axios.post(`${process.env.REACT_APP_API_URL}/auth/user/signup-otp`, {
+      email,
+      recaptchaValue
+    })
       .then(res => {
         alert(res.data.msg);
-        setStep(2); // Move to OTP step
+        setStep(2);
       })
       .catch(err => alert(err.response.data.msg));
   };
@@ -41,7 +52,7 @@ const UserSignup = () => {
           <h2>{step === 1 ? "Create Account" : "Verify Email"}</h2>
           <p>{step === 1 ? "Join our community today" : `Enter the code sent to ${email}`}</p>
         </div>
-        
+
         {step === 1 ? (
           <form onSubmit={sendOtp}>
             <div className='input-group'>
@@ -61,6 +72,12 @@ const UserSignup = () => {
                 </button>
               </div>
             </div>
+            <div>
+              <ReCAPTCHA
+                sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                onChange={(value) => setRecaptchaValue(value)}
+              />
+            </div>
             <button type="submit" className='auth-btn'>Send Verification Code</button>
           </form>
         ) : (
@@ -70,7 +87,7 @@ const UserSignup = () => {
               <input className='auth-input' type="text" placeholder="123456" onChange={(e) => setOtp(e.target.value)} required />
             </div>
             <button type="submit" className='auth-btn'>Verify & Sign Up</button>
-            <button type="button" onClick={() => setStep(1)} className='auth-link' style={{background:'none', border:'none', marginTop:'10px', cursor:'pointer'}}>
+            <button type="button" onClick={() => setStep(1)} className='auth-link' style={{ background: 'none', border: 'none', marginTop: '10px', cursor: 'pointer' }}>
               Edit Details
             </button>
           </form>

@@ -3,17 +3,29 @@ import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import ReCAPTCHA from "react-google-recaptcha";
 import '../UserLogin/auth.css';
 
 const UserLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [recaptchaValue, setRecaptchaValue] = useState(null);
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
-    axios.post(`${process.env.REACT_APP_API_URL}/auth/user/login`, { email, password })
+
+    if (!recaptchaValue) {
+      alert("Please complete the reCAPTCHA");
+      return;
+    }
+    
+    axios.post(`${process.env.REACT_APP_API_URL}/auth/user/login`, {
+      email,
+      password,
+      recaptchaValue
+    })
       .then(res => {
         localStorage.setItem('token', res.data.token);
         localStorage.setItem('fullName', res.data.fullName);
@@ -23,6 +35,10 @@ const UserLogin = () => {
       })
       .catch(() => alert('Invalid credentials'));
   };
+
+  const getRecaptchaValue = (value) => {
+    setRecaptchaValue(value)
+  }
 
   return (
     <div className='auth-page-wrapper'>
@@ -55,6 +71,13 @@ const UserLogin = () => {
             <div style={{ textAlign: 'right', marginTop: '5px' }}>
               <Link to="/forgot-password" style={{ fontSize: '0.8rem', color: '#007bff' }}>Forgot Password?</Link>
             </div>
+          </div>
+
+          <div>
+            <ReCAPTCHA
+              sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+              onChange={getRecaptchaValue}
+            />
           </div>
 
           <button type="submit" className='auth-btn'>Sign In</button>

@@ -13,7 +13,7 @@ A feature-rich, responsive Blog Application built with **React.js**. This projec
 
 ### User Side
 * **Dynamic Content:** Browse blogs by latest posts or specific categories.
-* **Secure Authentication:** User signup/login system with **OTP verification** and **Password Reset** functionality.
+* **Secure Authentication:** User signup/login system with **OTP verification**, **Google reCAPTCHA v2** protection, and **Password Reset** functionality.
 * **Interactive Comments:** Registered users can post comments and manage their own activity.
 * **Rich Text Rendering:** Beautifully rendered blog posts with support for images and formatting.
 
@@ -24,6 +24,7 @@ A feature-rich, responsive Blog Application built with **React.js**. This projec
 * **Rich Text Editor:** Integrated **ReactQuill** for professional content creation.
 
 ## 🛡️ Security & Best Practices
+* **Bot Protection:** Integrated **Google reCAPTCHA v2** on login and signup flows to prevent automated attacks.
 * **XSS Protection:** Implemented `DOMPurify` to sanitize HTML content before rendering, preventing Cross-Site Scripting attacks.
 * **Environment Variables:** Sensitive data (API Keys, Cloudinary config) is managed through `.env` files for security.
 * **Clean Code:** Zero ESLint warnings and fully accessible JSX (A11y compliant).
@@ -33,7 +34,7 @@ A feature-rich, responsive Blog Application built with **React.js**. This projec
 * **Styling:** Custom CSS3
 * **State & Data:** Axios, React Hooks (useState, useEffect, useCallback)
 * **Images:** Cloudinary API
-* **Security:** DOMPurify
+* **Security & Auth:** Google reCAPTCHA, JWT, DOMPurify
 
 ## ⚙️ Installation & Setup
 
@@ -56,6 +57,7 @@ A feature-rich, responsive Blog Application built with **React.js**. This projec
    REACT_APP_CLOUD_NAME="your cloud name"
    REACT_APP_UPLOAD_PRESET="your upload preset"
    REACT_APP_API_URL="hosting url"
+   REACT_APP_RECAPTCHA_SITE_KEY="your_google_recaptcha_site_key"
    ```
 
 4. **Start the development server:**
