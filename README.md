@@ -1,6 +1,6 @@
 # 📝 Modern MERN Blog Application (Frontend)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vansh-jain-b955a23a1/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vanshjain137)
 [![Live Demo](https://img.shields.io/badge/Live_Demo-View_Website-blue?style=for-the-badge)](https://vansh-blog-app.vercel.app/)
 
 > **⚠ NOTE: This is the Frontend repository.** 
